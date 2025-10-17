@@ -41,7 +41,7 @@ public class TransactionManager {
 
         // Example usage
         public static <Scanner> void main(String[] args) {
-            Scanner input = new java.util.Scanner[];
+            var input = new Scanner();
 
             System.out.print("Enter your username: ");
             String username = input.toString();

@@ -17,7 +17,7 @@ class LedgarApp {
         Features.userLogin();            // login demo
         Features.displayFullLedger();    // prints current ledger
         // You can call other Features.* methods here to demo them
-        System.out.println("Demo complete. Exiting.");
+        System.out.println("Demo complete. Exiting.")
         // close scanner on exit
         scan.close();
     }

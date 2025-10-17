@@ -3,10 +3,15 @@ package com.pluralsight;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.InputStream;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.*;
+import Scanner
+
+
+import static java.lang.System.out;
 
 /*
  * Features exposes user-driven operations: searching, sorting, adding deposits/payments,
@@ -68,7 +73,31 @@ public class Features {
             }
         }
     }
+    public static void main(String[] args)
+        boolean running = true;
 
+        while (running) {
+            out.println("MAIN MENU");
+            out.println("1. DEPOSIT");
+            out.println("2. PAYMENT");
+            out.println("3. LEDGER");
+            out.println("4. PAYMENT ");
+            out.
+
+            String choice = scanner.nextLine();
+
+            switch (choice) {
+                case "1" -> DEPOSIT();
+                case "2" -> PAYMENT();
+                case "3" -> LEDGER();
+
+                    out.println("\nGoodbye! HAVE A GREAT DAY!");
+                    running = false;
+                }
+                default -> out.println("\nInvalid choice. Try again.");
+            }
+        }
+    }
     /*
      * Prompt for vendor and print transactions that match.
      */

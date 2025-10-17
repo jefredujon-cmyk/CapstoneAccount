@@ -1,4 +1,4 @@
-package com.pluralsight.LedgerApp;
+package com.pluralsight;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
@@ -263,7 +263,7 @@ public class Features {
         System.out.println("Deposit saved.");
     }
 
-    /**
+    /*
      * Display the full ledger using Transaction helper.
      */
     public static void displayFullLedger() {
@@ -285,7 +285,7 @@ public class Features {
             String user = LedgarApp.scan.nextLine().trim();
             if (user.equalsIgnoreCase(validUser)) break;
             if (attempts == 1) {
-                System.out.println("You shall not pass!");
+                System.out.println(" Not Valid sir!");
                 System.exit(0);
             }
             System.out.println("Incorrect username — attempts left: " + (attempts - 1));

@@ -1,4 +1,4 @@
-package com.pluralsight.LedgerApp;
+package com.pluralsight;
 
 
 import java.util.Scanner;

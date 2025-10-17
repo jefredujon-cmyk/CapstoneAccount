@@ -1,4 +1,4 @@
-package com.pluralsight.LedgerApp;
+package com.pluralsight;
 
 import java.io.*;
 import java.time.LocalDate;

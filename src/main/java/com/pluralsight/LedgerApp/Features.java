@@ -303,6 +303,6 @@ public class Features {
             System.out.println("Incorrect password — attempts left: " + (attempts - 1));
         }
 
-        System.out.println("What up Jefre!");
+        System.out.println("What up Jefre!")
     }
 }

@@ -297,7 +297,7 @@ public class Features {
             String pass = LedgarApp.scan.nextLine().trim();
             if (pass.equals(validPass)) break;
             if (attempts == 1) {
-                System.out.println("You shall not pass!");
+                System.out.println(!"You aint Valid");
                 System.exit(0);
             }
             System.out.println("Incorrect password — attempts left: " + (attempts - 1));

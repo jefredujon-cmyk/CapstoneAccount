@@ -8,14 +8,14 @@ import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.*;
 
-/**
+/*
  * Features exposes user-driven operations: searching, sorting, adding deposits/payments,
  * and a basic login. This file uses Transaction.readTransactions / printTransactions / saveTransactions.
  */
 public class Features {
     private static final String FILE = "transactions.csv";
 
-    /**
+    /*
      * Custom search: prompts user for filters and prints matching transactions.
      */
     public static void customSearch() {
@@ -69,7 +69,7 @@ public class Features {
         }
     }
 
-    /**
+    /*
      * Prompt for vendor and print transactions that match.
      */
     public static void sortByVendor() {
@@ -96,7 +96,7 @@ public class Features {
         }
     }
 
-    /**
+    /*
      * Show previous calendar year transactions.
      */
     public static void sortPreviousYear() {
@@ -107,7 +107,7 @@ public class Features {
         Transaction.printTransactions(out);
     }
 
-    /**
+    /*
      * Show previous calendar month transactions.
      */
     public static void sortPreviousMonth() {
@@ -132,7 +132,7 @@ public class Features {
         Transaction.printTransactions(out);
     }
 
-    /**
+    /*
      * Month to date (current month up to today).
      */
     public static void sortMonthToDate() {
@@ -145,7 +145,7 @@ public class Features {
         Transaction.printTransactions(out);
     }
 
-    /**
+    /*
      * Print only payments (negative amounts), newest first.
      */
     public static void sortByPayments() {
@@ -170,7 +170,7 @@ public class Features {
         Transaction.printTransactions(deposits);
     }
 
-    /**
+    /*
      * Add a new payment (appends to CSV).
      * Presents prompts and does simple validation.
      */
@@ -297,12 +297,13 @@ public class Features {
             String pass = LedgarApp.scan.nextLine().trim();
             if (pass.equals(validPass)) break;
             if (attempts == 1) {
-                System.out.println(!"You aint Valid");
+                System.out.println(!Boolean.parseBoolean("You aint Valid"));
                 System.exit(0);
             }
             System.out.println("Incorrect password — attempts left: " + (attempts - 1));
         }
 
         System.out.println("What up Jefre!");
+
     }
 }

@@ -3,7 +3,7 @@ package com.pluralsight.LedgerApp;
 
 import java.util.Scanner;
 
-/**
+/*
  * Application entry point and shared resources.
  * Keeps a single Scanner instance used across the app.
  */

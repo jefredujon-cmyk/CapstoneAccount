@@ -23,5 +23,5 @@ class LedgarApp {
     }
 }
 
-public class Java {
+public class Ledger {
 }

@@ -5,7 +5,7 @@ import java.io.*;
 import java.time.LocalDate;
 import java.util.Scanner;
 
-public class TransactionManager {
+class TransactionManager {
 
         private static final String FILE_NAME = "transactions.csv";
 

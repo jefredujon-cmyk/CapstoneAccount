@@ -3,67 +3,95 @@ package com.pluralsight;
 import java.util.Scanner;
 
 
-    public class Menu {
-        private static final Scanner scanner = new Scanner(System.in);
+import java.util.Scanner;
 
-        public static void main(String[] args) {
-            boolean running = true;
+public class Menu {
+    private static final Scanner scanner = new Scanner(System.in);
 
-            while (running) {
-                System.out.println("\n==== Ledger Application Menu ====");
-                System.out.println("1. Payment");
-                System.out.println("2. Ledger");
-                System.out.println("3. Deposit");
-                System.out.println("4. Transaction");
-                System.out.println("5. Main / Exit");
-                System.out.print("Choose an option (1-5): ");
+    public static void main(String[] args) {
+        boolean running = true;
 
-                int choice = scanner.nextInt();
-                scanner.nextLine(); // clear input buffer
+        while (running) {
+            System.out.println("\n==== Ledger Application Menu ====");
+            System.out.println("1. Payment");
+            System.out.println("2. Ledger");
+            System.out.println("3. Deposit");
+            System.out.println("4. Transaction");
+            System.out.println("5. Main / Exit");
+            System.out.print("Choose an option (1-5): ");
 
-                switch (choice) {
-                    case 1:
-                        handlePayment();
-                        break;
-                    case 2:
-                        handleLedger();
-                        break;
-                    case 3:
-                        handleDeposit();
-                        break;
-                    case 4:
-                        handleTransaction();
-                        break;
-                    case 5:
-                        System.out.println("Returning to main or exiting program...");
-                        running = false;
-                        break;
-                    default:
-                        System.out.println("Invalid choice! Please select between 1–5.");
-                }
+            int choice = scanner.nextInt();
+            scanner.nextLine(); // clear input buffer
+
+            switch (choice) {
+                case 1:
+                    handlePayment();
+                    break;
+                case 2:
+                    handleLedger();
+                    break;
+                case 3:
+                    handleDeposit();
+                    break;
+                case 4:
+                    handleTransaction();
+                    break;
+                case 5:
+                    System.out.println("Returning to main or exiting program...");
+                    running = false;
+                    break;
+                default:
+                    System.out.println("Invalid choice! Please select between 1–5.");
             }
-
-            System.out.println("Program ended. Goodbye!");
         }
 
-        // --- Example Handlers ---
-        private static void handlePayment() {
-            System.out.println("You selected: Payment");
-            // Add payment logic here
-        }
-
-        private static void handleLedger() {
-            System.out.println("You selected: Ledger");
-            // Add ledger display or management logic here
-        }
-
-        private static void handleDeposit() {
-            System.out.println("You selected: Deposit");
-            // Add deposit logic here
-        }
-
-        private static void handleTransaction() {
-            System.out.println("You selected: Transaction");
-            // Add transaction logic here
-        }
+        System.out.println("Program ended. Goodbye!");
     }
+
+    // --- Option Handlers with Input ---
+    private static void handlePayment() {
+        System.out.println("\n--- Payment Section ---");
+        System.out.print("Enter payment amount: ");
+        double amount = scanner.nextDouble();
+        scanner.nextLine(); // clear buffer
+
+        System.out.print("Enter payment description: ");
+        String description = scanner.nextLine();
+
+        System.out.println("✅ Payment of $" + amount + " for \"" + description + "\" has been processed successfully!");
+    }
+
+    private static void handleLedger() {
+        System.out.println("\n--- Ledger Section ---");
+        System.out.println("Here you would normally view your past deposits, payments, and transactions.");
+        System.out.println("📘 (Feature under development: will display saved ledger entries)");
+    }
+
+    private static void handleDeposit() {
+        System.out.println("\n--- Deposit Section ---");
+        System.out.print("Enter deposit amount: ");
+        double amount = scanner.nextDouble();
+        scanner.nextLine();
+
+        System.out.print("Enter deposit source or note: ");
+        String source = scanner.nextLine();
+
+        System.out.println("💰 Deposit of $" + amount + " from \"" + source + "\" recorded successfully!");
+    }
+
+    private static void handleTransaction() {
+        System.out.println("\n--- Transaction Section ---");
+        System.out.print("Enter transaction type (payment/deposit): ");
+        String type = scanner.nextLine();
+
+        System.out.print("Enter amount: ");
+        double amount = scanner.nextDouble();
+        scanner.nextLine();
+
+        System.out.print("Enter transaction note: ");
+        String note = scanner.nextLine();
+
+        System.out.println("📄 Transaction recorded: " + type.toUpperCase() +
+                " of $" + amount + " | Note: \"" + note + "\"");
+    }
+}
